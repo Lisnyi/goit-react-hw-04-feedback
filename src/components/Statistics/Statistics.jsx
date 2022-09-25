@@ -1,9 +1,11 @@
+import { nanoid } from "nanoid"
+
 export const Statistics = ({good, neutral, bad, total, positivePercentage}) => {
-    return  <div>
-                <p>Good: {good}</p>
-                <p>Neutral: {neutral}</p>
-                <p>Bad: {bad}</p>
-                <p>Total: {total}</p>
-                <p>Positive feedback: {positivePercentage}%</p>
-            </div>
+    return  <ul>
+                <li key={nanoid()}>Good: {good}</li>
+                <li key={nanoid()}>Neutral: {neutral}</li>
+                <li key={nanoid()}>Bad: {bad}</li>
+                <li key={nanoid()}>Total: {total}</li>
+                <li key={nanoid()}>Positive feedback: {positivePercentage}%</li>
+            </ul>
 } 
