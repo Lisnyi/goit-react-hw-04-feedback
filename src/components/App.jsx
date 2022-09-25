@@ -22,7 +22,7 @@ export default class App extends Component {
   
   countPositiveFeedbackPercentage (good, total) {
     const positivePercentage = good/total*100
-    return positivePercentage.toFixed(0)
+    return Number(positivePercentage.toFixed(0))
   }
 
   render() {
