@@ -1,14 +1,15 @@
 import { nanoid } from "nanoid"
 import PropTypes from 'prop-types'
+import { StatisticsList, StatisticsItem } from "./Statistics.styled"
 
 export const Statistics = ({good, neutral, bad, total, positivePercentage}) => {
-    return  <ul>
-                <li key={nanoid()}>Good: {good}</li>
-                <li key={nanoid()}>Neutral: {neutral}</li>
-                <li key={nanoid()}>Bad: {bad}</li>
-                <li key={nanoid()}>Total: {total}</li>
-                <li key={nanoid()}>Positive feedback: {positivePercentage}%</li>
-            </ul>
+    return  <StatisticsList>
+                <StatisticsItem key={nanoid()}>Good: {good}</StatisticsItem>
+                <StatisticsItem key={nanoid()}>Neutral: {neutral}</StatisticsItem>
+                <StatisticsItem key={nanoid()}>Bad: {bad}</StatisticsItem>
+                <StatisticsItem key={nanoid()}>Total: {total}</StatisticsItem>
+                <StatisticsItem key={nanoid()}>Positive feedback: {positivePercentage}%</StatisticsItem>
+            </StatisticsList>
 }
 
 Statistics.propTypes = {
