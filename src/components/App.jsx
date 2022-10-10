@@ -7,16 +7,16 @@ const initialState = {
   bad: 0
 }
 
-function optionsReducer (state, action) {
-  switch (action.type) {
+function optionsReducer (state, {type, payload}) {
+  switch (type) {
     case 'good':
-      return {...state, good: state.good + action.payload}
+      return {...state, good: state.good + payload}
     case 'neutral':
-      return {...state, neutral: state.neutral + action.payload}
+      return {...state, neutral: state.neutral + payload}
     case 'bad':
-      return {...state, bad: state.bad + action.payload}
+      return {...state, bad: state.bad + payload}
     default:
-      throw new Error(`Unsuported actin type ${action.type}`)
+      throw new Error(`Unsuported actin type ${type}`)
   }
 }
 
